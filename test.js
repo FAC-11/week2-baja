@@ -1,13 +1,6 @@
 var test = require('tape');
 var todoFunctions = require('./logic');
 
-// test('Example test', function(t) {
-//   t.pass();
-//   t.end();
-// });
-
-//testing deleteTodo
-//
 var arr = [
  {
    id: 0,
@@ -48,16 +41,34 @@ test('remove the object with the idtodelete value', function(t){
  t.end();
 });
 
-// //testing createtodo
-//
-// test('leave the input argument todos unchanged', function(t) {
-//   var expected = [];
-//   var todo = {
-// id: 0,
-// description: 'smash avocados',
-// done: true,
-// };
-//   var actual = todoFunctions.addTodo([], todo );
-//   t.deepEqual(actual, expected, "array should not be mutated");
-//   t.end();
-// });
+//addTodo Tests
+var todo = {
+            description: 'smash avocados',
+            done: true,
+            };
+var todoWithId = {
+            id: 0,
+            description: 'smash avocados',
+            done: true,
+            };
+
+test('leave the input argument todos unchanged', function(t) {
+  var expected = [];
+  todoFunctions.addTodo(expected, todo );
+  t.deepEqual(expected, [], "array should not be mutated");
+  t.end();
+});
+
+test('returns a new array ith the new Todo added to the end', function(t) {
+  var expected = [todo];
+  var actual = todoFunctions.addTodo([], todo );
+  t.deepEqual(actual, expected, "new todo object is added to array");
+  t.end();
+});
+
+test('new to do object should be given an id', function(t) {
+  var expected = true;
+  var actual = todoFunctions.addTodo([], todo )[0].hasOwnProperty('id');
+  t.equal(actual, expected, "object should have an id property");
+  t.end();
+});
