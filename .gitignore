@@ -1,3 +1,7 @@
+# CUSTOM IGNORES
+.DS_Store
+
+# GITHUB DEFAULT NODE IGNORES
 # Logs
 logs
 *.log
