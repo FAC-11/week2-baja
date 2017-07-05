@@ -1,0 +1,22 @@
+{
+  "name": "week2-baja",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FAC-11/week2-baja.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FAC-11/week2-baja/issues"
+  },
+  "homepage": "https://github.com/FAC-11/week2-baja#readme",
+  "devDependencies": {
+    "tape": "^4.7.0"
+  }
+}
