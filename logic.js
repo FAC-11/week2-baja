@@ -21,10 +21,14 @@ var todoFunctions = {
     // hint: array.concat
   },
   deleteTodo: function(todos, idToDelete) {
+  return todos.filter(function(object){
+    return object.id!==idToDelete ;
+  });
+},
     // should leave the input argument todos unchanged
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
-  },
+
   markTodo: function(todos, idToMark) {
     // should leave the input argument todos unchanged
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
