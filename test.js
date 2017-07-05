@@ -19,7 +19,7 @@ test('leave the input argument todos unchanged', function(t) {
   t.end();
 });
 
-test('returns a new array, it should contain todos with the newTodo added to the end', function(t) {
+test('returns a new array ith the new Todo added to the end', function(t) {
   var expected = [todo];
   var actual = todoFunctions.addTodo([], todo );
   t.deepEqual(actual, expected, "new todo object is added to array");
