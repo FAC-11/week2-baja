@@ -52,4 +52,6 @@ var todoFunctions = {
   },
 };
 
-module.exports = todoFunctions;
+if (typeof module !== 'undefined') {
+  module.exports = todoFunctions;
+}
