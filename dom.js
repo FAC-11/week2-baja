@@ -62,7 +62,7 @@
       event.preventDefault();
       var description = event.target.firstElementChild.value; // event.target ....
       // hint: todoFunctions.addTodo
-      var newState = todoFunctions.addTodo(state, { description: description }); // ?? change this!
+      var newState = todoFunctions.addTodo(state, description); // ?? change this!
       update(newState);
     });
   }
