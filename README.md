@@ -33,7 +33,7 @@ So **how** did we actually do it *(after the meltdowns)*?
 [To learn about Array.isArray()](https://www.w3schools.com/jsref/jsref_isarray.asp)
 [createElement and createTextNode](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
 [Prepend node element](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/prepend)
-[]()
+[Remove Bullet Points](http://css.maxdesign.com.au/listutorial/02.htm)
 []()
 
 ### Bart
