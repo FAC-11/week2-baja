@@ -37,6 +37,9 @@
     // add markTodo button
     var markTodoCheckboxNode = document.createElement('input');
     markTodoCheckboxNode.type = "checkbox";
+    if (todo.done){
+      markTodoCheckboxNode.checked = "checked";
+    }
 
     todoNode.prepend(markTodoCheckboxNode);
     markTodoCheckboxNode.addEventListener('click', function(event){
