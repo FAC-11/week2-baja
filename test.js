@@ -106,14 +106,7 @@ test('should return object with a done property',function(t){
   t.end();
 });
 
-test('should return "false" to done key', function(t){
-  var description = "avocados";
-  var expected = false;
-  var actual = todoFunctions.addTodo([], description)[0]['done'];
-  t.equal(actual, expected, "new todo done property should be false")
-});
-
-//markTodo Tests
+// //markTodo Tests
 test('should leave the input argument todos unchanged', function(t) {
   var todoWithId = {
     id: 0,

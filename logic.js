@@ -14,15 +14,20 @@ var todoFunctions = {
 
     return incrementCounter;
   })(),
-  addTodo: function(todos, newTodo) {
+  addTodo: function(todos, descriptionString) {
     // should leave the input argument todos unchanged
     // returns a new array, it should contain todos with the newTodo added to the end.
     // add an id to the newTodo. You can use the generateId function to create an id.
     // hint: array.concat
-    newTodo.id = todoFunctions.generateId();
-    var newList = todos.concat([newTodo]);
+    var newTodo=[{
+      id: todoFunctions.generateId(),
+      description: descriptionString,
+      done: false
+    }];
+    var newList = todos.concat(newTodo);
     return newList;
   },
+
   deleteTodo: function(todos, idToDelete) {
   return todos.filter(function(object){
     return object.id!==idToDelete ;
@@ -41,7 +46,7 @@ var todoFunctions = {
       if (todo.id === idToMark) {
         todo.done = !todo.done;
       }
-      return todo;  
+      return todo;
     })
   },
   sortTodos: function(todos, sortFunction) {
