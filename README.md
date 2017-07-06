@@ -6,7 +6,7 @@ We find that sometimes disorganised people want to:
 * enter tasks they need to do into a web page so that they don't forget them
 * view the tasks they have added in a list so that they can plan their day
 * mark tasks as complete so that they can focus on the tasks they have left
-So we wanted to create a user-friendly todo list app for these disorganised people. 
+So we wanted to create a user-friendly todo list app for these disorganised people.
 
 ## WHAT (describing your site)
 
@@ -31,8 +31,8 @@ So **how** did we actually do it *(after the meltdowns)*?
 
 ## Learning
 [To learn about Array.isArray()](https://www.w3schools.com/jsref/jsref_isarray.asp)
-[]()
-[]()
+[createElement and createTextNode](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
+[Prepend node element](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/prepend)
 []()
 []()
 
