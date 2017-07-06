@@ -35,9 +35,8 @@
     deleteButtonNode.appendChild(deleteText);
 
     // add markTodo button
+
     var markTodoLabel = document.createElement('label');
-
-
     todoNode.prepend(markTodoLabel);
     var markTodoInput = document.createElement('input');
     markTodoLabel.appendChild(markTodoInput);
