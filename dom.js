@@ -35,15 +35,16 @@
     deleteButtonNode.appendChild(deleteText);
 
     // add markTodo button
-    var markTodoCheckboxNode = document.createElement('input');
-    markTodoCheckboxNode.type = "checkbox";
-    if (todo.done){
-      markTodoCheckboxNode.checked = "checked";
-    }
 
-    todoNode.prepend(markTodoCheckboxNode);
-    markTodoCheckboxNode.addEventListener('click', function(event){
-      var newState = todoFunctions.markTodo(state, todo.id);
+    var markTodoLabel = document.createElement('label');
+    todoNode.prepend(markTodoLabel);
+    var markTodoInput = document.createElement('input');
+    markTodoLabel.appendChild(markTodoInput);
+    markTodoInput.type = "checkbox";
+    var markTodoSpan = document.createElement('span');
+    markTodoLabel.appendChild(markTodoSpan);
+    markTodoInput.addEventListener('click', function(event){
+    var newState = todoFunctions.markTodo(state, todo.id);
 
 
     })
