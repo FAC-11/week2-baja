@@ -117,7 +117,7 @@ test('should leave the input argument todos unchanged', function(t) {
 });
 
 test('in the new todo array, all elements will remain unchanged except the one with id: idToMark', function(t) {
-  var todoWithId = {
+  var todoDoneTrue = {
     id: 0,
     description: 'smash avocados',
     done: true,
@@ -127,8 +127,13 @@ test('in the new todo array, all elements will remain unchanged except the one w
     description: 'smash avocados',
     done: false,
   };
-  var expected = [todoWithId];
-  var todoList = [todoDoneFalse];
+  var toDoOther = {
+    id: 1,
+    description: 'eating bananas',
+    done: false
+  };
+  var expected = [ todoDoneTrue, toDoOther ];
+  var todoList = [ todoDoneFalse, toDoOther ];
   var actual = todoFunctions.markTodo(todoList, 0);
   t.deepEqual(actual, expected, "the done value of the object with the specified id should be toggled");
   t.end();
