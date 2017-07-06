@@ -64,41 +64,53 @@ test('Should remove the object with the idtodelete value', function(t) {
 });
 
 //addTodo Tests
-
+// need to pass in a description string not object
 test('leave the input argument todos unchanged', function(t) {
-  var todo = {
-    description: 'smash avocados',
-    done: true,
-  };
+  var description = "smash avocados";
   var actual = [];
   var expected = [];
-  todoFunctions.addTodo(actual, todo);
+  todoFunctions.addTodo(actual, description);
   t.deepEqual(actual, expected, "array should not be mutated");
   t.end();
 });
 
-test('returns a new array with the new Todo added to the end', function(t) {
+// should b
+test('should returns a new array with the new Todo added to the end', function(t) {
   var todo = {
-    description: 'smash avocados',
-    done: true,
+    id: 2,
+    description: "smash avocados",
+    done: false
   };
-
+  var description = "smash avocados";
   var expected = [todo];
-  var actual = todoFunctions.addTodo([], todo);
-  t.deepEqual(actual, expected, "new todo object is added to array");
+  var actual = todoFunctions.addTodo([], description);
+  // manually changing id due to generateId being random
+  actual[0].id=2;
+  t.deepEqual(actual, expected, "new todo object is created and added to the array");
   t.end();
 });
 
-test('new to do object should be given an id', function(t) {
-  var todo = {
-    description: 'smash avocados',
-    done: true,
-  };
-
+test('New todo object should have id property', function(t) {
+  var description = "smash avocados";
   var expected = true;
-  var actual = todoFunctions.addTodo([], todo)[0].hasOwnProperty('id');
-  t.equal(actual, expected, "object should have an id property");
+  var actual = todoFunctions.addTodo([], description)[0].hasOwnProperty('id');
+  t.equal(actual, expected, "New todo object should have id property");
   t.end();
+});
+
+test('should return object with a done property',function(t){
+  var description= "avocados";
+  var expected = true;
+  var actual = todoFunctions.addTodo([], description)[0].hasOwnProperty('done');
+  t.equal(actual, expected, "the new todo object should have a done property");
+  t.end();
+});
+
+test('should return "false" to done key', function(t){
+  var description = "avocados";
+  var expected = false;
+  var actual = todoFunctions.addTodo([], description)[0]['done'];
+  t.equal(actual, expected, "new todo done property should be false")
 });
 
 //markTodo Tests
