@@ -19,7 +19,10 @@
 
 
     // add span holding description
-    var todoSpan = document.createElement('span');
+    if (todo.done) {
+      var todoSpan = document.createElement('del');
+    } else {
+    var todoSpan = document.createElement('span')};
     todoNode.appendChild(todoSpan);
     var descriptionNode = document.createTextNode(todo.description);
     todoSpan.appendChild(descriptionNode);
@@ -55,6 +58,7 @@
     markTodoSpan.appendChild(markImage);
     markTodoInput.addEventListener('click', function(event){
         var newState = todoFunctions.markTodo(state, todo.id);
+        update(newState);
     })
 
 
