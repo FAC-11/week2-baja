@@ -24,15 +24,20 @@
     var descriptionNode = document.createTextNode(todo.description);
     todoSpan.appendChild(descriptionNode);
     // this adds the delete button
-    var deleteButtonNode = document.createElement('button');
+    var deleteButtonNode = document.createElement('span');
+    // var deleteButtonNode = document.createElement('i');
+    // deleteButtonNode.classList.add('fa');
+    // deleteButtonNode.classList.add('fa-trash-o');
 
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
     });
     todoNode.appendChild(deleteButtonNode);
-    var deleteText = document.createTextNode("Delete");
-    deleteButtonNode.appendChild(deleteText);
+    var deleteImage = document.createElement("i");
+    deleteImage.classList.add('fa');
+    deleteImage.classList.add('fa-trash-o');
+    deleteButtonNode.appendChild(deleteImage);
 
     // add markTodo button
 
@@ -44,6 +49,10 @@
     markTodoInput.checked = todo.done;
     var markTodoSpan = document.createElement('span');
     markTodoLabel.appendChild(markTodoSpan);
+    var markImage = document.createElement("i");
+    markImage.classList.add('fa');
+    markImage.classList.add('fa-check');
+    markTodoSpan.appendChild(markImage);
     markTodoInput.addEventListener('click', function(event){
         var newState = todoFunctions.markTodo(state, todo.id);
     })
