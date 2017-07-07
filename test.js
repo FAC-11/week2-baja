@@ -75,7 +75,7 @@ test('leave the input argument todos unchanged', function(t) {
 });
 
 // should b
-test('should returns a new array with the new Todo added to the end', function(t) {
+test('should return a new array with the new Todo added to the end', function(t) {
   var todo = {
     id: 2,
     description: "smash avocados",
