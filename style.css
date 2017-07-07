@@ -8,49 +8,71 @@ font-family: 'Lato', sans-serif;
 
 }
 
-.todo-container  li, form {
+/*.todo-container  li, form {
 
-  width: 90vw;
+  width: 100%;
   margin: 3% auto;
   list-style-type: none;
   text-align: center;
   font-size: 2rem;
-  /*height: 50px;*/
   display: inline-block;
 
-}
+}*/
 
-.todo-container span, button, form > input {
+/*.todo-container span, button, form > input {
 
   border: 1px solid black;
   padding: 1%;
   font-size: 2rem;
 
 
-}
+}*/
 
-.todo-container input [type=checkbox] {
-  width: 300px; /*Desired width*/
-height: 300px; /*Desired height*/
+/*.todo-container input[type=checkbox] {
+  width: 300px; 
+height: 300px; 
 cursor: pointer;
 -webkit-appearance: none;
 appearance: none;
-}
+}*/
 
 form {
   position: fixed;
+  top: 0;
   margin: 0;
   background-color: lightblue;
   width: 100%; 
-  /*overrides 90vw*/
   padding: 30px 0;
   z-index: 1;
   border-bottom: solid darkslategrey 2px;
+  text-align: center;
+}
+
+form > input {
+  font-size: 2rem;
+}
+
+form > input[type='text'] {
+  max-width: 90%;
+}
+
+form > input[type='submit'] {
+  margin-top: 15px;
+  -webkit-appearance: button;
 }
 
 .todo-container {
   position: relative;
-  top: 130px; 
+  top: 200px; 
+}
+.todo-container > ul > li > span {
+  width: 75%;
+  display: inline-block;
+  margin: 0 auto;
 }
 
+.todo-container > ul {
+  margin: 10px;
+  font-size: 2rem;
+}
 
