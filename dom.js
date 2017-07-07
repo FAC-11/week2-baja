@@ -41,12 +41,11 @@
     var markTodoInput = document.createElement('input');
     markTodoLabel.appendChild(markTodoInput);
     markTodoInput.type = "checkbox";
+    markTodoInput.checked = todo.done;
     var markTodoSpan = document.createElement('span');
     markTodoLabel.appendChild(markTodoSpan);
     markTodoInput.addEventListener('click', function(event){
-    var newState = todoFunctions.markTodo(state, todo.id);
-
-
+        var newState = todoFunctions.markTodo(state, todo.id);
     })
 
 
