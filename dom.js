@@ -23,6 +23,10 @@
     todoNode.appendChild(todoSpan);
     var descriptionNode = document.createTextNode(todo.description);
     todoSpan.appendChild(descriptionNode);
+    if (todo.done === true) {
+      todoSpan.style.textDecoration = 'line-through';
+      todoSpan.style.fontStyle = 'italic';
+    }
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
 
@@ -46,6 +50,7 @@
     markTodoLabel.appendChild(markTodoSpan);
     markTodoInput.addEventListener('click', function(event){
         var newState = todoFunctions.markTodo(state, todo.id);
+        update(newState);
     })
 
 
