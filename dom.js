@@ -26,6 +26,10 @@
     todoNode.appendChild(todoSpan);
     var descriptionNode = document.createTextNode(todo.description);
     todoSpan.appendChild(descriptionNode);
+    if (todo.done === true) {
+      todoSpan.style.textDecoration = 'line-through';
+      todoSpan.style.fontStyle = 'italic';
+    }
     // this adds the delete button
     var deleteButtonNode = document.createElement('span');
     // var deleteButtonNode = document.createElement('i');
